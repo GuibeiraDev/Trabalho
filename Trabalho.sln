@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trabalho", "Trabalho\Trabalho.csproj", "{3BEF23D9-B33F-46E6-A9AE-C6F5FD8B3AC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImpostoDeRendaTest", "TrabalhoTest\ImpostoDeRendaTest.csproj", "{0851A1E3-1085-4B1F-AB5A-80FC5523F5CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3BEF23D9-B33F-46E6-A9AE-C6F5FD8B3AC2} = {3BEF23D9-B33F-46E6-A9AE-C6F5FD8B3AC2}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraTest", "CalculadoraTest\CalculadoraTest.csproj", "{8884D9EB-5F9D-4168-A056-F0FCDE183E47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadorIMCTest", "CalculadorIMCTest\CalculadorIMCTest.csproj", "{6AD17CA9-922A-49A7-B813-EB4264F6B5D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConversorMetrosParaMilimetrosTest", "ConversorMetrosParaMilimetros\ConversorMetrosParaMilimetrosTest.csproj", "{4A19DB43-66EB-4BE9-A9FD-C1D6BFFA9213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorresDeHanoiTest", "TorresDeHanoiTest\TorresDeHanoiTest.csproj", "{CEC9F047-745D-4C39-A252-676116CF144E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BEF23D9-B33F-46E6-A9AE-C6F5FD8B3AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEF23D9-B33F-46E6-A9AE-C6F5FD8B3AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEF23D9-B33F-46E6-A9AE-C6F5FD8B3AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEF23D9-B33F-46E6-A9AE-C6F5FD8B3AC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0851A1E3-1085-4B1F-AB5A-80FC5523F5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0851A1E3-1085-4B1F-AB5A-80FC5523F5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0851A1E3-1085-4B1F-AB5A-80FC5523F5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0851A1E3-1085-4B1F-AB5A-80FC5523F5CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8884D9EB-5F9D-4168-A056-F0FCDE183E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8884D9EB-5F9D-4168-A056-F0FCDE183E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8884D9EB-5F9D-4168-A056-F0FCDE183E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8884D9EB-5F9D-4168-A056-F0FCDE183E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD17CA9-922A-49A7-B813-EB4264F6B5D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD17CA9-922A-49A7-B813-EB4264F6B5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD17CA9-922A-49A7-B813-EB4264F6B5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD17CA9-922A-49A7-B813-EB4264F6B5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A19DB43-66EB-4BE9-A9FD-C1D6BFFA9213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A19DB43-66EB-4BE9-A9FD-C1D6BFFA9213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A19DB43-66EB-4BE9-A9FD-C1D6BFFA9213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A19DB43-66EB-4BE9-A9FD-C1D6BFFA9213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC9F047-745D-4C39-A252-676116CF144E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC9F047-745D-4C39-A252-676116CF144E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC9F047-745D-4C39-A252-676116CF144E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC9F047-745D-4C39-A252-676116CF144E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {335D399F-1C0A-4C20-A249-01250B19DA20}
+	EndGlobalSection
+EndGlobal
