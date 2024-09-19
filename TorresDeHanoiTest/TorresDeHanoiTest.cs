@@ -1,77 +1,32 @@
 using Trabalho;
 
-namespace TrabalhoTest
+
+namespace Trabalho.Tests
 {
     [TestClass]
-    public class TorresDeHanoiTest
+    public class TorresDeHanoiTests
     {
         [TestMethod]
-        public void Resolver_TresDiscosTest()
+        public void TestarTorresDeHanoiComDiscosVariados()
         {
-            // Cenário
-            int numeroDeDiscos = 3;
-            char origem = 'A';
-            char destino = 'C';
-            char auxiliar = 'B';
-            TorresDeHanoi torres = new TorresDeHanoi();
+            // Preparar
+            TorresDeHanoi.ResetMovimentos();
+            int numeroDeDiscos = 4; // testar numeros de discos
+            var esperado = (int)Math.Pow(2, numeroDeDiscos) - 1; // é o numero exato de movimentos
 
-            // Redirecionar a saída padrão para capturar as mensagens de console
-            var saidaConsole = new StringWriter();
-            Console.SetOut(saidaConsole);
-
-            // Ação
-            torres.Resolver(numeroDeDiscos, origem, destino, auxiliar);
-
-            // Verificação
-            string saidaEsperada = "Mover disco 1 de A para C\r\n" +
-                                   "Mover disco 2 de A para B\r\n" +
-                                   "Mover disco 1 de C para B\r\n" +
-                                   "Mover disco 3 de A para C\r\n" +
-                                   "Mover disco 1 de B para A\r\n" +
-                                   "Mover disco 2 de B para C\r\n" +
-                                   "Mover disco 1 de A para C\r\n";
-
-            if (saidaConsole.ToString() == saidaEsperada)
+            // Captura da saída do console
+            using (var sw = new StringWriter())
             {
-                Console.WriteLine("Teste Resolver_TresDiscosTest: Passou");
-            }
-            else
-            {
-                Console.WriteLine("Teste Resolver_TresDiscosTest: Falhou");
-                Console.WriteLine("Saída obtida:");
-                Console.WriteLine(saidaConsole.ToString());
-            }
-        }
+                Console.SetOut(sw);
 
-        [TestMethod]
-        public void Resolver_UmDiscoTest()
-        {
-            // Cenário
-            int numeroDeDiscos = 1;
-            char origem = 'A';
-            char destino = 'C';
-            char auxiliar = 'B';
-            TorresDeHanoi torres = new TorresDeHanoi();
+                // Ação
+                TorresDeHanoi.Resolver(numeroDeDiscos, 'A', 'C', 'B');
 
-            // Redirecionar a saída padrão para capturar as mensagens de console
-            var saidaConsole = new StringWriter();
-            Console.SetOut(saidaConsole);
+                // Obter o resultado
+                var movimentosRealizados = TorresDeHanoi.ObterMovimentos();
 
-            // Ação
-            torres.Resolver(numeroDeDiscos, origem, destino, auxiliar);
-
-            // Verificação
-            string saidaEsperada = "Mover disco 1 de A para C\r\n";
-
-            if (saidaConsole.ToString() == saidaEsperada)
-            {
-                Console.WriteLine("Teste Resolver_UmDiscoTest: Passou");
-            }
-            else
-            {
-                Console.WriteLine("Teste Resolver_UmDiscoTest: Falhou");
-                Console.WriteLine("Saída obtida:");
-                Console.WriteLine(saidaConsole.ToString());
+                // Verificar
+                Assert.AreEqual(esperado, movimentosRealizados, $"O número de movimentos esperado para {numeroDeDiscos} discos é {esperado}, mas foi {movimentosRealizados}.");
             }
         }
     }

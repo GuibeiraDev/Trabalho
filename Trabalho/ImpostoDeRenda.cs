@@ -8,7 +8,7 @@ namespace Trabalho
 {
     public class ImpostoRenda
     {
-        // Método para calcular o imposto de renda com base no salário anual
+        // usamos base anual
         public double Calcular(double salarioAnual)
         {
             double imposto;

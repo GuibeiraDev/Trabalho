@@ -14,16 +14,17 @@ namespace Trabalho
             {
                 throw new ArgumentException("A altura deve ser maior que zero.");
             }
-            return peso / (altura * altura);
+            // Arredonda o IMC para 2 casas decimais
+            return Math.Round(peso / (altura * altura), 2);
         }
 
         public string Classificar(double imc)
         {
             if (imc < 18.5)
                 return "Abaixo do peso";
-            if (imc >= 18.5 && imc < 24.9)
+            if (imc >= 18.5 && imc <= 24.9)
                 return "Peso normal";
-            if (imc >= 25 && imc < 29.9)
+            if (imc >= 25 && imc <= 29.9)
                 return "Sobrepeso";
             return "Obesidade";
         }
